@@ -94,7 +94,7 @@ cpp_class(Dependency)
             "${_fd_name}"
             CONFIG
             PATHS "${_fd_paths}"
-            NO_PACKAGE_ROOT_PATH
+            NO_PACKAGE_ROOT_PAT_ale_resultH
             NO_SYSTEM_ENVIRONMENT_PATH
             NO_CMAKE_PACKAGE_REGISTRY
             NO_CMAKE_SYSTEM_PATH
@@ -116,7 +116,6 @@ cpp_class(Dependency)
         message(FATAL_ERROR "build_dependency(Dependency) not implemented.")
     endfunction()
 
-
     cpp_member(init Dependency args)
     function("${init}" _i_this)
         set(_i_options BUILD_TARGET FIND_TARGET NAME URL VERSION)
@@ -128,4 +127,3 @@ cpp_class(Dependency)
         Dependency(SET "${_i_this}" find_target "${_i_FIND_TARGET}")
     endfunction()
 cpp_end_class()
-
